@@ -1,0 +1,32 @@
+classification: oobb
+color: ''
+depth: 9
+description_extra: ''
+description_main: 6_width_8_height_9_mm_depth
+height: 8
+manufacturer: ''
+name: plate_l
+oobb_details:
+  depth: 9
+  height: 8
+  oobb_name: plate_l
+  width: 6
+part_number: ''
+size: plate_l
+taxonomy_1: oobb
+taxonomy_10: ''
+taxonomy_11: ''
+taxonomy_12: ''
+taxonomy_13: ''
+taxonomy_14: ''
+taxonomy_15: ''
+taxonomy_2: part
+taxonomy_3: plate_l
+taxonomy_4: 6_width
+taxonomy_5: 8_height
+taxonomy_6: 9_mm_depth
+taxonomy_7: ''
+taxonomy_8: ''
+taxonomy_9: ''
+type: part
+width: 6

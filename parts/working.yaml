@@ -1,0 +1,577 @@
+bip_39_2_word_array:
+- staff
+- unaware
+bip_39_2_word_no_space: staffunaware
+bip_39_2_word_space: staff unaware
+bip_39_2_word_underscore: staff_unaware
+bip_39_3_word_array:
+- staff
+- unaware
+- cushion
+bip_39_3_word_no_space: staffunawarecushion
+bip_39_3_word_space: staff unaware cushion
+bip_39_3_word_underscore: staff_unaware_cushion
+bip_39_full_array:
+- staff
+- unaware
+- cushion
+- bulk
+- arctic
+- act
+- plastic
+- abuse
+- ocean
+- guitar
+- awesome
+- wise
+bip_39_full_no_space: staffunawarecushionbulkarcticactplasticabuseoceanguitarawesomewise
+bip_39_full_space: staff unaware cushion bulk arctic act plastic abuse ocean guitar
+    awesome wise
+bip_39_full_underscore: staff_unaware_cushion_bulk_arctic_act_plastic_abuse_ocean_guitar_awesome_wise
+classification: oobb
+color: ''
+description_extra: ''
+description_main: 9_width_8_height_3_mm_depth
+directory: parts/
+full_rotations:
+- 0
+- 0
+- 0
+full_shift:
+- 0
+- 0
+- 0
+generate_stl: true
+id: ''
+id_no_class: ''
+id_no_size: ''
+id_no_type: ''
+id_oobb: oobb_part_oomlout_oobb_part_plate_l_plate_l_9_width_8_height_3_mm_depth
+kwargs:
+    filter: ''
+    height: 8
+    modes:
+    - 3dpr
+    - laser
+    navigation: true
+    oomp_classification: oobb
+    oomp_color: ''
+    oomp_description_extra: ''
+    oomp_description_main: 9_width_8_height_3_mm_depth
+    oomp_manufacturer: ''
+    oomp_mode: oobb
+    oomp_part_number: ''
+    oomp_run: true
+    oomp_size: plate_l
+    oomp_type: part
+    overwrite: false
+    thickness: 3
+    typ: all
+    type: oomlout_oobb_part_plate_l_plate_l
+    width: 9
+link_github: https://github.com/oomlout/oomlout_oomp_version_1_messy/tree/main/parts/
+link_main: https://github.com/oomlout/oomlout_oomp_version_1_messy/tree/main/parts/
+link_redirect: https://github.com/oomlout/oomlout_oomp_version_1_messy/tree/main/parts/
+manufacturer: ''
+md5: d41d8cd98f00b204e9800998ecf8427e
+md5_10: d41d8cd98f
+md5_10_upper: D41D8CD98F
+md5_5: d41d8
+md5_5_upper: D41D8
+md5_6: d41d8c
+md5_6_alpha: 89y8c
+md5_6_alpha_upper: 89Y8C
+md5_6_upper: D41D8C
+name: ''
+name_no_class: ''
+name_no_size: ''
+name_no_type: ''
+name_proper: Oobb Part Plate L 9 Width 8 Height 3 Mm Depth
+name_space: oobb part plate l 9 width 8 height 3 mm depth
+name_upper: OOBB PART PLATE L 9 WIDTH 8 HEIGHT 3 MM DEPTH
+oomlout_ai_roboclick_1:
+    actions:
+    -   command: new_chat
+        description: step_1_create_icon
+    -   command: ai_query
+        delay: '120'
+        mode_ai_wait: slow
+        text: 'This is a context-loading and exploration step for a laser-cuttable
+            mascot logo. Take your time and think expansively before answering. Explore
+            multiple mascot directions, compare several line-art approaches, stress-test
+            them for charm, readability, manufacturability, and overall polish, and
+            explain everything that would be useful for the next step. The goal here
+            is not brevity. The goal is to surface strong options, useful observations,
+            and a well-reasoned direction for a square, single-colour, black-on-white
+            mascot logo drawing that is charming, original, cute, polished, and instantly
+            readable at small size.
+
+
+            Creative direction:
+
+            - Invent one central mascot concept based on the theme, but push beyond
+            generic clip art. The mascot should feel witty, memorable, and slightly
+            surprising while still being cute and simple.
+
+            - Favor an adorable line-drawing character with a clear face, pose, and
+            identity. Anthropomorphize only as much as needed for charm and readability.
+
+            - Supporting elements and text are allowed and can be important when they
+            help define the identity, dimensions, category, mood, or story of the
+            logo.
+
+            - Favor iconic themed props, symbols, labels, and shape cues over random
+            decoration. Every element should help the logo read faster and feel more
+            complete.
+
+            - Think in stages before writing: concept search, line-language search,
+            simplification, and final refinement. Prefer the idea that stays most
+            legible after simplification.
+
+            - Deliberately look for a concept that feels specific to the theme rather
+            than generic kawaii branding.
+
+            - Keep the cute details genuinely sweet and lovable: soft expressions,
+            appealing proportions, simple cheeks, tiny hands or feet only if they
+            help, and charming gesture choices.
+
+            - Search for a direction that feels like a designed branded icon rather
+            than a loose doodle page.
+
+            - Make all parts of the image feel like they were designed by one illustrator
+            in one visual family, with consistent shape logic, line language, facial
+            styling, spacing, and proportion choices.
+
+            - Favor rounded geometric simplification, clear negative space, gentle
+            symmetry or balance where useful, and a visual hierarchy where the mascot
+            leads and the supporting details and text reinforce.
+
+
+            Format and manufacturing constraints:
+
+            - Pure black artwork on a pure white background only.
+
+            - No grey, no shading, no gradients, no halftones, no texture, no color,
+            no transparency, and no background scene.
+
+            - Prefer line drawing over large filled black areas. Use clean outlines
+            and sparse interior detail instead of heavy solid shapes.
+
+            - Design for laser cutting: lines should be confident and durable rather
+            than hairline-thin; details should be simple; no dense crosshatching;
+            and any islands should be connected if the design depends on physical
+            continuity.
+
+            - Keep the artwork centered in a square composition with comfortable margins
+            and a clean airy overall read.
+
+            - The drawing should feel cute, open, and light rather than dark, chunky,
+            or posterized.
+
+            - If text is used, it should be bold, simple, highly legible, and visually
+            integrated with the illustration.
+
+            - Border-like framing is allowed only if it strengthens the logo as a
+            clean badge or label shape rather than making it feel boxed in.
+
+            - Prioritize readability, cuteness, manufacturability, clarity, cohesion,
+            and polish over detail.
+
+
+            What to include in your response:
+
+            - Several candidate mascot directions for the theme, with notes on why
+            each could work.
+
+            - Observations about line clarity, readability at small size, cuteness,
+            and laser-cut safety.
+
+            - Notes on what details should be simplified, merged, thickened, connected,
+            or removed to keep the drawing light and appealing.
+
+            - Suggestions for supporting motifs and text treatments only where they
+            genuinely improve the idea.
+
+            - Observations about what makes the composition feel polished, cohesive,
+            brandable, and visually unified rather than random or clip-art-like.
+
+            - A recommended direction, with an explanation of why it is strongest.
+
+            - One strong final image-generation prompt at the end, ready for later
+            use.
+
+
+            Response style:
+
+            - Explain your reasoning clearly and include all useful detail.
+
+            - It is fine to use structure, bullets, short sections, and comparisons
+            if that helps clarity.
+
+            - The final prompt should explicitly say the image is square and black
+            on white.
+
+            '
+    -   command: ai_query
+        delay: '120'
+        mode_ai_wait: slow
+        text: 'Now use the exploration work to develop the direction for this theme:
+            an image of oobb part plate l 9 width 8 height 3 mm depth make Oobb Part
+            Plate L 9 Width 8 Height 3 Mm Depth cute
+
+
+            Take your time and search outward before narrowing down. Flesh the theme
+            out beyond its obvious first interpretation. Explore multiple mascot angles,
+            visual metaphors, poses, supporting motifs, text treatments, and line-drawing
+            approaches, and explain what becomes more interesting, more readable,
+            cuter, more cohesive, or more manufacturable as you develop the idea.
+            Make it more creatively specific than the theme name alone while staying
+            laser-cut safe.
+
+
+            What to do:
+
+            - Explore a healthy range of possible directions, not just the first few
+            obvious ones.
+
+            - Search for specific, memorable, and theme-native ideas rather than generic
+            cute branding.
+
+            - Compare different mascot interpretations, poses, prop choices, supporting
+            motifs, and label or badge text treatments where relevant.
+
+            - Compare different outline and interior-line strategies, especially ones
+            that avoid large dark filled areas.
+
+            - Discuss what helps or hurts the drawing at small size.
+
+            - Call out what should be simplified, thickened, connected, merged, or
+            removed for laser cutting.
+
+            - Surface tradeoffs between charm, cuteness, clarity, uniqueness, and
+            manufacturability.
+
+            - Favor directions that feel sweet, lovable, and visually light. Avoid
+            details that make the mascot feel fussy, stern, generic, or overdesigned.
+
+            - Favor directions where the mascot, supporting details, and text feel
+            like one designed system rather than separate assets placed next to each
+            other.
+
+            - Look for ways to make the composition feel more polished, premium, badge-like,
+            and visually intentional without losing warmth.
+
+            - Recommend the strongest direction only after the exploration feels well
+            developed.
+
+            - End with one polished final image-generation prompt paragraph for the
+            recommended direction.
+
+
+            Response style:
+
+            - Explain everything that seems useful for the next step.
+
+            - It is good to be expansive here; do not compress the thinking prematurely.
+
+            - Structured notes, comparisons, bullets, and short sections are welcome
+            if they help clarity.
+
+            - The final prompt should explicitly say the image is square and black
+            on white.
+
+            '
+    -   command: ai_query
+        delay: '120'
+        mode_ai_wait: slow
+        text: Generate the image take all the time you need
+    -   command: save_image_generated
+        file_name: initial_generated_icon.png
+        mode_ai_wait: slow
+    -   command: close_tab
+    file_test: initial_generated_icon.png
+oomlout_ai_roboclick_2:
+    actions:
+    -   command: text_jinja_template
+        convert_to_pdf: false
+        convert_to_png: false
+        dict_data:
+            classification: oobb
+            color: ''
+            description_extra: ''
+            description_main: 9_width_8_height_3_mm_depth
+            directory: parts\
+            full_rotations:
+            - 0
+            - 0
+            - 0
+            full_shift:
+            - 0
+            - 0
+            - 0
+            id: oobb_part_plate_l_9_width_8_height_3_mm_depth
+            id_oobb: oobb_part_oomlout_oobb_part_plate_l_plate_l_9_width_8_height_3_mm_depth
+            kwargs:
+                filter: ''
+                height: 8
+                modes:
+                - 3dpr
+                - laser
+                navigation: true
+                oomp_classification: oobb
+                oomp_color: ''
+                oomp_description_extra: ''
+                oomp_description_main: 9_width_8_height_3_mm_depth
+                oomp_manufacturer: ''
+                oomp_mode: oobb
+                oomp_part_number: ''
+                oomp_run: true
+                oomp_size: plate_l
+                oomp_type: part
+                overwrite: false
+                thickness: 3
+                typ: all
+                type: oomlout_oobb_part_plate_l_plate_l
+                width: 9
+            manufacturer: ''
+            name: oobb_part_plate_l_9_width_8_height_3_mm_depth
+            name_proper: Oobb Part Plate L 9 Width 8 Height 3 Mm Depth
+            name_space: oobb part plate l 9 width 8 height 3 mm depth
+            name_upper: OOBB PART PLATE L 9 WIDTH 8 HEIGHT 3 MM DEPTH
+            oomlout_ai_roboclick_1:
+                actions:
+                -   command: new_chat
+                    description: step_1_create_icon
+                -   command: ai_query
+                    delay: '120'
+                    mode_ai_wait: slow
+                    text: 'This is a context-loading and exploration step for a laser-cuttable
+                        mascot logo. Take your time and think expansively before answering.
+                        Explore multiple mascot directions, compare several line-art
+                        approaches, stress-test them for charm, readability, manufacturability,
+                        and overall polish, and explain everything that would be useful
+                        for the next step. The goal here is not brevity. The goal
+                        is to surface strong options, useful observations, and a well-reasoned
+                        direction for a square, single-colour, black-on-white mascot
+                        logo drawing that is charming, original, cute, polished, and
+                        instantly readable at small size.
+
+
+                        Creative direction:
+
+                        - Invent one central mascot concept based on the theme, but
+                        push beyond generic clip art. The mascot should feel witty,
+                        memorable, and slightly surprising while still being cute
+                        and simple.
+
+                        - Favor an adorable line-drawing character with a clear face,
+                        pose, and identity. Anthropomorphize only as much as needed
+                        for charm and readability.
+
+                        - Supporting elements and text are allowed and can be important
+                        when they help define the identity, dimensions, category,
+                        mood, or story of the logo.
+
+                        - Favor iconic themed props, symbols, labels, and shape cues
+                        over random decoration. Every element should help the logo
+                        read faster and feel more complete.
+
+                        - Think in stages before writing: concept search, line-language
+                        search, simplification, and final refinement. Prefer the idea
+                        that stays most legible after simplification.
+
+                        - Deliberately look for a concept that feels specific to the
+                        theme rather than generic kawaii branding.
+
+                        - Keep the cute details genuinely sweet and lovable: soft
+                        expressions, appealing proportions, simple cheeks, tiny hands
+                        or feet only if they help, and charming gesture choices.
+
+                        - Search for a direction that feels like a designed branded
+                        icon rather than a loose doodle page.
+
+                        - Make all parts of the image feel like they were designed
+                        by one illustrator in one visual family, with consistent shape
+                        logic, line language, facial styling, spacing, and proportion
+                        choices.
+
+                        - Favor rounded geometric simplification, clear negative space,
+                        gentle symmetry or balance where useful, and a visual hierarchy
+                        where the mascot leads and the supporting details and text
+                        reinforce.
+
+
+                        Format and manufacturing constraints:
+
+                        - Pure black artwork on a pure white background only.
+
+                        - No grey, no shading, no gradients, no halftones, no texture,
+                        no color, no transparency, and no background scene.
+
+                        - Prefer line drawing over large filled black areas. Use clean
+                        outlines and sparse interior detail instead of heavy solid
+                        shapes.
+
+                        - Design for laser cutting: lines should be confident and
+                        durable rather than hairline-thin; details should be simple;
+                        no dense crosshatching; and any islands should be connected
+                        if the design depends on physical continuity.
+
+                        - Keep the artwork centered in a square composition with comfortable
+                        margins and a clean airy overall read.
+
+                        - The drawing should feel cute, open, and light rather than
+                        dark, chunky, or posterized.
+
+                        - If text is used, it should be bold, simple, highly legible,
+                        and visually integrated with the illustration.
+
+                        - Border-like framing is allowed only if it strengthens the
+                        logo as a clean badge or label shape rather than making it
+                        feel boxed in.
+
+                        - Prioritize readability, cuteness, manufacturability, clarity,
+                        cohesion, and polish over detail.
+
+
+                        What to include in your response:
+
+                        - Several candidate mascot directions for the theme, with
+                        notes on why each could work.
+
+                        - Observations about line clarity, readability at small size,
+                        cuteness, and laser-cut safety.
+
+                        - Notes on what details should be simplified, merged, thickened,
+                        connected, or removed to keep the drawing light and appealing.
+
+                        - Suggestions for supporting motifs and text treatments only
+                        where they genuinely improve the idea.
+
+                        - Observations about what makes the composition feel polished,
+                        cohesive, brandable, and visually unified rather than random
+                        or clip-art-like.
+
+                        - A recommended direction, with an explanation of why it is
+                        strongest.
+
+                        - One strong final image-generation prompt at the end, ready
+                        for later use.
+
+
+                        Response style:
+
+                        - Explain your reasoning clearly and include all useful detail.
+
+                        - It is fine to use structure, bullets, short sections, and
+                        comparisons if that helps clarity.
+
+                        - The final prompt should explicitly say the image is square
+                        and black on white.
+
+                        '
+                -   command: ai_query
+                    delay: '120'
+                    mode_ai_wait: slow
+                    text: 'Now use the exploration work to develop the direction for
+                        this theme: an image of oobb part plate l 9 width 8 height
+                        3 mm depth make Oobb Part Plate L 9 Width 8 Height 3 Mm Depth
+                        cute
+
+
+                        Take your time and search outward before narrowing down. Flesh
+                        the theme out beyond its obvious first interpretation. Explore
+                        multiple mascot angles, visual metaphors, poses, supporting
+                        motifs, text treatments, and line-drawing approaches, and
+                        explain what becomes more interesting, more readable, cuter,
+                        more cohesive, or more manufacturable as you develop the idea.
+                        Make it more creatively specific than the theme name alone
+                        while staying laser-cut safe.
+
+
+                        What to do:
+
+                        - Explore a healthy range of possible directions, not just
+                        the first few obvious ones.
+
+                        - Search for specific, memorable, and theme-native ideas rather
+                        than generic cute branding.
+
+                        - Compare different mascot interpretations, poses, prop choices,
+                        supporting motifs, and label or badge text treatments where
+                        relevant.
+
+                        - Compare different outline and interior-line strategies,
+                        especially ones that avoid large dark filled areas.
+
+                        - Discuss what helps or hurts the drawing at small size.
+
+                        - Call out what should be simplified, thickened, connected,
+                        merged, or removed for laser cutting.
+
+                        - Surface tradeoffs between charm, cuteness, clarity, uniqueness,
+                        and manufacturability.
+
+                        - Favor directions that feel sweet, lovable, and visually
+                        light. Avoid details that make the mascot feel fussy, stern,
+                        generic, or overdesigned.
+
+                        - Favor directions where the mascot, supporting details, and
+                        text feel like one designed system rather than separate assets
+                        placed next to each other.
+
+                        - Look for ways to make the composition feel more polished,
+                        premium, badge-like, and visually intentional without losing
+                        warmth.
+
+                        - Recommend the strongest direction only after the exploration
+                        feels well developed.
+
+                        - End with one polished final image-generation prompt paragraph
+                        for the recommended direction.
+
+
+                        Response style:
+
+                        - Explain everything that seems useful for the next step.
+
+                        - It is good to be expansive here; do not compress the thinking
+                        prematurely.
+
+                        - Structured notes, comparisons, bullets, and short sections
+                        are welcome if they help clarity.
+
+                        - The final prompt should explicitly say the image is square
+                        and black on white.
+
+                        '
+                -   command: ai_query
+                    delay: '120'
+                    mode_ai_wait: slow
+                    text: Generate the image take all the time you need
+                -   command: save_image_generated
+                    file_name: initial_generated_icon.png
+                    mode_ai_wait: slow
+                -   command: close_tab
+                file_test: initial_generated_icon.png
+            part_number: ''
+            project_name: C:\gh\oomlout_oobb_part_plate_l
+            size: plate_l
+            type: part
+            url_chat: ''
+        dict_data_files: {}
+        dict_data_files_exists: {}
+        file_output: label_oomp.svg
+        file_template: source_file\template_jinja\oomp_category\template_jinja_label_oomlout_76_2_mm_50_8_mm\working.svg.j2
+        search_and_replace: []
+    file_test: label_oomp.pdf
+oomp_key: oomp_
+part_number: ''
+project_name: C:\gh\oomlout_oobb_part_plate_l
+run_action: false
+run_oomp: true
+run_oomp_populate: true
+run_scad: true
+size: plate_l
+type: part
+url_chat: ''

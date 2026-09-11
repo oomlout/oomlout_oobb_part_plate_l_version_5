@@ -128,61 +128,58 @@ def get_base(thing, **kwargs):
     if prepare_print:
         scad_help.prepare_base_for_print(thing, pos, **kwargs)
 
+
 def get_plate_l(thing, **kwargs):
+    """Draw an L plate using the same two-leg construction as the old part."""
     prepare_print = kwargs.get("prepare_print", False)
     width = kwargs.get("width", 1)
     height = kwargs.get("height", 1)
     depth = kwargs.get("depth", kwargs.get("thickness", 3))
-    rot = kwargs.get("rot", [0, 0, 0])
     pos = kwargs.get("pos", [0, 0, 0])
     extra = kwargs.get("extra", "")
 
-    # Left upright plate.
+    # Left upright leg.
     p3 = copy.deepcopy(kwargs)
     p3["type"] = "positive"
     p3["shape"] = "oobb_plate"
     p3["width"] = 1
     p3["depth"] = depth
-    pos1 = copy.deepcopy(pos)
-    poss = []
-    pos12 = copy.deepcopy(pos1)
-    pos12[0] += -(width - 1) / 2 * 15
-    poss.append(pos12)
-    p3["pos"] = poss
+    leg_pos = copy.deepcopy(pos)
+    leg_pos[0] -= (width - 1) / 2 * 15
+    p3["pos"] = [leg_pos]
     oobb.append_full(thing, **p3)
 
-    # Bottom upright plate.
+    # Bottom leg.
     p3 = copy.deepcopy(kwargs)
     p3["type"] = "positive"
     p3["shape"] = "oobb_plate"
     p3["height"] = 1
     p3["depth"] = depth
-    pos1 = copy.deepcopy(pos)
-    poss = []
-    pos11 = copy.deepcopy(pos1)
-    pos11[1] += -(height - 1) / 2 * 15
-    poss.append(pos11)
-    p3["pos"] = poss
+    leg_pos = copy.deepcopy(pos)
+    leg_pos[1] -= (height - 1) / 2 * 15
+    p3["pos"] = [leg_pos]
     oobb.append_full(thing, **p3)
 
-    # Cut the corner holes out separately so the L shape stays open.
+    # Hole cuts stay on the exposed top and left faces, leaving the inside
+    # corner as the solid join between the two legs.
     p3 = copy.deepcopy(kwargs)
     p3["type"] = "p"
     p3["shape"] = "oobb_holes"
+    p3["depth"] = depth
     if extra == "":
         p3["both_holes"] = True
         p3["holes"] = ["top", "left"]
-    p3["depth"] = depth
-    p3["m"] = "#"
-    pos1 = copy.deepcopy(pos)
-    p3["pos"] = pos1
+    p3["pos"] = copy.deepcopy(pos)
     oobb.append_full(thing, **p3)
 
     if prepare_print:
         scad_help.prepare_base_for_print(thing, pos, **kwargs)
 
+
 def get_plat_l(thing, **kwargs):
+    """Compatibility alias for the historical misspelling."""
     return get_plate_l(thing, **kwargs)
+
 
 def get_hole_cover(thing, **kwargs):
 

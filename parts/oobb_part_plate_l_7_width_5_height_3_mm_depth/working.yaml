@@ -1,42 +1,223 @@
+bip_39_2_word_array:
+- you
+- office
+bip_39_2_word_no_space: youoffice
+bip_39_2_word_space: you office
+bip_39_2_word_underscore: you_office
+bip_39_3_word_array:
+- you
+- office
+- clutch
+bip_39_3_word_no_space: youofficeclutch
+bip_39_3_word_space: you office clutch
+bip_39_3_word_underscore: you_office_clutch
+bip_39_full_array:
+- you
+- office
+- clutch
+- summer
+- negative
+- master
+- hedgehog
+- security
+- you
+- forest
+- trial
+- weather
+bip_39_full_no_space: youofficeclutchsummernegativemasterhedgehogsecurityyouforesttrialweather
+bip_39_full_space: you office clutch summer negative master hedgehog security you
+    forest trial weather
+bip_39_full_underscore: you_office_clutch_summer_negative_master_hedgehog_security_you_forest_trial_weather
 classification: oobb
 color: ''
 description_extra: ''
 description_main: 7_width_5_height_3_mm_depth
-full_rotations:
-- 0
-- 0
-- 0
-full_shift:
-- 0
-- 0
-- 0
+directory: parts/oobb_part_plate_l_7_width_5_height_3_mm_depth
+height: 5
 id: oobb_part_plate_l_7_width_5_height_3_mm_depth
-id_oobb: oobb_part_oomlout_oobb_part_plate_l_plate_l_7_width_5_height_3_mm_depth
-kwargs:
-  filter: ''
-  height: 5
-  modes:
-  - 3dpr
-  - laser
-  navigation: true
-  oomp_classification: oobb
-  oomp_color: ''
-  oomp_description_extra: ''
-  oomp_description_main: 7_width_5_height_3_mm_depth
-  oomp_manufacturer: ''
-  oomp_mode: oobb
-  oomp_part_number: ''
-  oomp_run: true
-  oomp_size: plate_l
-  oomp_type: part
-  overwrite: false
-  thickness: 3
-  typ: all
-  type: oomlout_oobb_part_plate_l_plate_l
-  width: 7
+id_no_class: part_plate_l_7_width_5_height_3_mm_depth
+id_no_size: 7_width_5_height_3_mm_depth
+id_no_type: plate_l_7_width_5_height_3_mm_depth
+link_github: https://github.com/oomlout/oomlout_oomp_version_1_messy/tree/main/parts/oobb_part_plate_l_7_width_5_height_3_mm_depth
+link_main: https://github.com/oomlout/oomlout_oomp_version_1_messy/tree/main/parts/oobb_part_plate_l_7_width_5_height_3_mm_depth
+link_redirect: https://github.com/oomlout/oomlout_oomp_version_1_messy/tree/main/parts/oobb_part_plate_l_7_width_5_height_3_mm_depth
 manufacturer: ''
-name: plate_l
+md5: ff3330b26c993f115aa616ff2b67a0fc
+md5_10: ff3330b26c
+md5_10_upper: FF3330B26C
+md5_5: ff333
+md5_5_upper: FF333
+md5_6: ff3330
+md5_6_alpha: 9ygxc
+md5_6_alpha_upper: 9YGXC
+md5_6_upper: FF3330
+name: Oobb Part Plate L 7 Width 5 Height 3 Mm Depth
+name_no_class: Part Plate L 7 Width 5 Height 3 Mm Depth
+name_no_size: 7 Width 5 Height 3 Mm Depth
+name_no_type: Plate L 7 Width 5 Height 3 Mm Depth
+name_proper: Oobb Part Plate L 7 Width 5 Height 3 Mm Depth
+name_space: oobb part plate l 7 width 5 height 3 mm depth
+name_upper: OOBB PART PLATE L 7 WIDTH 5 HEIGHT 3 MM DEPTH
+oobb_details:
+    depth: 3
+    height: 5
+    oobb_name: plate_l
+    thickness: 3
+    width: 7
+oomlout_ai_roboclick_1:
+    actions:
+    -   command: text_jinja_template
+        convert_to_pdf: false
+        convert_to_png: false
+        dict_data:
+            classification: oobb
+            color: ''
+            description_extra: ''
+            description_main: 7_width_5_height_3_mm_depth
+            directory: parts\oobb_part_plate_l_7_width_5_height_3_mm_depth
+            height: 5
+            manufacturer: ''
+            name: oobb_part_plate_l_7_width_5_height_3_mm_depth
+            name_proper: Oobb Part Plate L 7 Width 5 Height 3 Mm Depth
+            name_space: oobb part plate l 7 width 5 height 3 mm depth
+            name_upper: OOBB PART PLATE L 7 WIDTH 5 HEIGHT 3 MM DEPTH
+            oobb_details:
+                depth: 3
+                height: 5
+                oobb_name: plate_l
+                thickness: 3
+                width: 7
+            part_number: ''
+            size: plate_l
+            taxonomy_1: oobb
+            taxonomy_10: ''
+            taxonomy_11: ''
+            taxonomy_12: ''
+            taxonomy_13: ''
+            taxonomy_14: ''
+            taxonomy_15: ''
+            taxonomy_2: part
+            taxonomy_3: plate_l
+            taxonomy_4: 7_width
+            taxonomy_5: 5_height
+            taxonomy_6: 3_mm_depth
+            taxonomy_7: ''
+            taxonomy_8: ''
+            taxonomy_9: ''
+            thickness: 3
+            type: part
+            url_chat: ''
+            width: 7
+        dict_data_files: {}
+        dict_data_files_exists: {}
+        file_output: label_oomp.svg
+        file_template: C:\gh\oomlout_oobb_part_plate_l\source_file\template_jinja\template_jinja_label_oomlout_76_2_mm_50_8_mm\working.svg.j2
+        search_and_replace: []
+    file_test: label_oomp.pdf
+    retries_until_complete: 0
+oomp_key: oomp_oobb_part_plate_l_7_width_5_height_3_mm_depth
 part_number: ''
-project_name: C:\gh\oomlout_oobb_part_plate_l
 size: plate_l
+taxonomy_1: oobb
+taxonomy_10: ''
+taxonomy_11: ''
+taxonomy_12: ''
+taxonomy_13: ''
+taxonomy_14: ''
+taxonomy_15: ''
+taxonomy_1_capital: Oobb
+taxonomy_1_first_letter: o
+taxonomy_1_first_letter_upper: O
+taxonomy_1_length_1: o
+taxonomy_1_length_2: oo
+taxonomy_1_length_3: oob
+taxonomy_1_length_4: oobb
+taxonomy_1_length_5: oobb
+taxonomy_1_upper: OOBB
+taxonomy_1_upper_length_1: O
+taxonomy_1_upper_length_2: OO
+taxonomy_1_upper_length_3: OOB
+taxonomy_1_upper_length_4: OOBB
+taxonomy_1_upper_length_5: OOBB
+taxonomy_2: part
+taxonomy_2_capital: Part
+taxonomy_2_first_letter: p
+taxonomy_2_first_letter_upper: P
+taxonomy_2_length_1: p
+taxonomy_2_length_2: pa
+taxonomy_2_length_3: par
+taxonomy_2_length_4: part
+taxonomy_2_length_5: part
+taxonomy_2_upper: PART
+taxonomy_2_upper_length_1: P
+taxonomy_2_upper_length_2: PA
+taxonomy_2_upper_length_3: PAR
+taxonomy_2_upper_length_4: PART
+taxonomy_2_upper_length_5: PART
+taxonomy_3: plate_l
+taxonomy_3_capital: Plate L
+taxonomy_3_first_letter: p
+taxonomy_3_first_letter_upper: P
+taxonomy_3_length_1: p
+taxonomy_3_length_2: pl
+taxonomy_3_length_3: pla
+taxonomy_3_length_4: plat
+taxonomy_3_length_5: plate
+taxonomy_3_upper: PLATE_L
+taxonomy_3_upper_length_1: P
+taxonomy_3_upper_length_2: PL
+taxonomy_3_upper_length_3: PLA
+taxonomy_3_upper_length_4: PLAT
+taxonomy_3_upper_length_5: PLATE
+taxonomy_4: 7_width
+taxonomy_4_capital: 7 Width
+taxonomy_4_first_letter: '7'
+taxonomy_4_first_letter_upper: '7'
+taxonomy_4_length_1: '7'
+taxonomy_4_length_2: '7_'
+taxonomy_4_length_3: 7_w
+taxonomy_4_length_4: 7_wi
+taxonomy_4_length_5: 7_wid
+taxonomy_4_upper: 7_WIDTH
+taxonomy_4_upper_length_1: '7'
+taxonomy_4_upper_length_2: '7_'
+taxonomy_4_upper_length_3: 7_W
+taxonomy_4_upper_length_4: 7_WI
+taxonomy_4_upper_length_5: 7_WID
+taxonomy_5: 5_height
+taxonomy_5_capital: 5 Height
+taxonomy_5_first_letter: '5'
+taxonomy_5_first_letter_upper: '5'
+taxonomy_5_length_1: '5'
+taxonomy_5_length_2: '5_'
+taxonomy_5_length_3: 5_h
+taxonomy_5_length_4: 5_he
+taxonomy_5_length_5: 5_hei
+taxonomy_5_upper: 5_HEIGHT
+taxonomy_5_upper_length_1: '5'
+taxonomy_5_upper_length_2: '5_'
+taxonomy_5_upper_length_3: 5_H
+taxonomy_5_upper_length_4: 5_HE
+taxonomy_5_upper_length_5: 5_HEI
+taxonomy_6: 3_mm_depth
+taxonomy_6_capital: 3 mm Depth
+taxonomy_6_first_letter: '3'
+taxonomy_6_first_letter_upper: '3'
+taxonomy_6_length_1: '3'
+taxonomy_6_length_2: '3_'
+taxonomy_6_length_3: 3_m
+taxonomy_6_length_4: 3_mm
+taxonomy_6_length_5: 3_mm_
+taxonomy_6_upper: 3_MM_DEPTH
+taxonomy_6_upper_length_1: '3'
+taxonomy_6_upper_length_2: '3_'
+taxonomy_6_upper_length_3: 3_M
+taxonomy_6_upper_length_4: 3_MM
+taxonomy_6_upper_length_5: 3_MM_
+taxonomy_7: ''
+taxonomy_8: ''
+taxonomy_9: ''
+thickness: 3
 type: part
+url_chat: ''
+width: 7

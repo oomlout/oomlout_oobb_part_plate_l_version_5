@@ -1,6 +1,5 @@
 classification: oobb
 color: ''
-depth: 15
 description_extra: ''
 description_main: 3_width_3_height_15_mm_depth
 height: 3
@@ -10,6 +9,7 @@ oobb_details:
   depth: 15
   height: 3
   oobb_name: plate_l
+  thickness: 15
   width: 3
 part_number: ''
 size: plate_l
@@ -28,5 +28,6 @@ taxonomy_6: 15_mm_depth
 taxonomy_7: ''
 taxonomy_8: ''
 taxonomy_9: ''
+thickness: 15
 type: part
 width: 3

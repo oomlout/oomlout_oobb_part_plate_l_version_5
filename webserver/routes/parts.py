@@ -1,7 +1,9 @@
 from __future__ import annotations
 
 import re
+import sys
 from pathlib import Path
+from typing import Any
 
 import yaml
 from flask import Blueprint, abort, current_app, flash, jsonify, redirect, render_template, request, send_file, url_for
@@ -69,9 +71,61 @@ def _build_taxonomy_breadcrumb_links(part: dict[str, object]) -> list[dict[str, 
     return breadcrumb_links
 
 
+def _build_file_inventory_tree(files: list[dict[str, object]]) -> dict[str, object]:
+    root: dict[str, Any] = {
+        "name": "",
+        "path": "",
+        "directories": {},
+        "files": [],
+    }
+
+    for file_record in files:
+        relative_path = str(file_record.get("relative_path", "")).strip()
+        if not relative_path:
+            continue
+        path_parts = [segment for segment in Path(relative_path).as_posix().split("/") if segment]
+        if not path_parts:
+            continue
+        current = root
+        for segment in path_parts[:-1]:
+            directories = current["directories"]
+            if segment not in directories:
+                parent_path = current["path"]
+                node_path = f"{parent_path}/{segment}" if parent_path else segment
+                directories[segment] = {
+                    "name": segment,
+                    "path": node_path,
+                    "directories": {},
+                    "files": [],
+                }
+            current = directories[segment]
+        current["files"].append(file_record)
+
+    def finalize(node: dict[str, Any]) -> dict[str, object]:
+        directories = [
+            finalize(child)
+            for _, child in sorted(
+                node["directories"].items(),
+                key=lambda item: str(item[0]).lower(),
+            )
+        ]
+        files_for_node = sorted(
+            node["files"],
+            key=lambda item: str(item.get("relative_path", "")).lower(),
+        )
+        return {
+            "name": node["name"],
+            "path": node["path"],
+            "directories": directories,
+            "files": files_for_node,
+        }
+
+    return finalize(root)
+
+
 def _annotate_file_actions(part: dict[str, object]) -> tuple[list[dict[str, object]], list[dict[str, object]]]:
     numbered_actions: list[dict[str, object]] = []
-    legend_by_id: dict[str, dict[str, object]] = {}
+    legend_by_key: dict[str, dict[str, object]] = {}
 
     for file_record in part.get("files", []):
         if not isinstance(file_record, dict):
@@ -90,23 +144,66 @@ def _annotate_file_actions(part: dict[str, object]) -> tuple[list[dict[str, obje
                 file_actions.append(annotated_action)
                 continue
 
-            action_id = str(annotated_action.get("id", "")).strip()
-            if action_id not in legend_by_id:
+            legend_key = str(annotated_action.get("legend_group") or annotated_action.get("id", "")).strip()
+            if legend_key not in legend_by_key:
                 legend_entry = {
-                    "id": action_id,
+                    "id": legend_key,
                     "label": str(annotated_action.get("label", "")).strip(),
                     "action_number": len(numbered_actions) + 1,
                 }
-                legend_by_id[action_id] = legend_entry
+                legend_by_key[legend_key] = legend_entry
                 numbered_actions.append(legend_entry)
 
-            annotated_action["action_number"] = legend_by_id[action_id]["action_number"]
+            annotated_action["action_number"] = legend_by_key[legend_key]["action_number"]
             annotated_action["is_numbered"] = True
             file_actions.append(annotated_action)
 
         file_record["actions"] = file_actions
 
+    total_slots = len(numbered_actions)
+    for file_record in part.get("files", []):
+        if not isinstance(file_record, dict):
+            continue
+        slots: list[dict[str, object] | None] = [None] * total_slots
+        for action in file_record.get("actions", []):
+            if isinstance(action, dict) and action.get("is_numbered"):
+                idx = int(action["action_number"]) - 1
+                if 0 <= idx < total_slots:
+                    slots[idx] = action
+        file_record["numbered_slots"] = slots
+
     return part.get("files", []), numbered_actions
+
+
+def _attach_file_action_links(part: dict[str, object]) -> None:
+    for file_record in part.get("files", []):
+        if not isinstance(file_record, dict):
+            continue
+        relative_path = str(file_record.get("relative_path", "")).strip()
+        if not relative_path:
+            continue
+        download_url = url_for(
+            "parts.part_file",
+            part_id=part["id"],
+            relative_path=relative_path,
+            _external=True,
+        )
+        linked_actions = []
+        for action in file_record.get("actions", []):
+            if not isinstance(action, dict):
+                linked_actions.append(action)
+                continue
+            annotated_action = dict(action)
+            printer_selection = annotated_action.get("print_server_printer_selection")
+            printer_name = str(annotated_action.get("print_server_printer_name", "")).strip()
+            if printer_selection and printer_name and not annotated_action.get("convert_svg_before_print"):
+                annotated_action["href"] = file_actions.build_print_server_url(
+                    download_url,
+                    printer_name,
+                )
+                annotated_action["target"] = "print-frame"
+            linked_actions.append(annotated_action)
+        file_record["actions"] = linked_actions
 
 
 def _resolve_part_file_path(part: dict[str, object], relative_path: str) -> Path | None:
@@ -172,7 +269,9 @@ def _build_part_viewer_payload(part: dict[str, object]) -> dict[str, object]:
 def part_detail(part_id: str):
     part = _load_part_with_assets_or_404(part_id)
     breadcrumb_links = _build_taxonomy_breadcrumb_links(part)
+    _attach_file_action_links(part)
     _, action_legend = _annotate_file_actions(part)
+    file_inventory_tree = _build_file_inventory_tree(part.get("files", []))
     manual_fields = current_app.config["CONFIG_UI"]["manual_fields"]
     previewable = part.get("preview_file")
     working_yaml_text = yaml.safe_dump(
@@ -192,6 +291,7 @@ def part_detail(part_id: str):
     return render_template(
         "part_detail.html",
         part=part,
+        file_inventory_tree=file_inventory_tree,
         breadcrumb_links=breadcrumb_links,
         action_legend=action_legend,
         manual_fields=manual_fields,
@@ -250,7 +350,7 @@ def reload_part_detail(part_id: str):
     return redirect(url_for("parts.part_detail", part_id=part_id))
 
 
-@parts_blueprint.post("/parts/<part_id>/files/<path:relative_path>/actions/<action_id>")
+@parts_blueprint.post("/parts/<part_id>/<path:relative_path>/actions/<action_id>")
 def run_part_file_action(part_id: str, relative_path: str, action_id: str):
     part = _load_part_or_404(part_id)
     source_path = _resolve_part_file_path(part, relative_path)
@@ -262,6 +362,26 @@ def run_part_file_action(part_id: str, relative_path: str, action_id: str):
         abort(404)
 
     invocation = action.build_invocation(source_path)
+    if invocation.mode == "svg-print":
+        part_dir = Path(str(part["part_dir"])).resolve()
+        pdf_relative = invocation.target_path.relative_to(part_dir).as_posix()
+        pdf_download_url = url_for("parts.part_file", part_id=part_id, relative_path=pdf_relative, _external=True)
+        printer_name = invocation.print_server_printer_name or ""
+        runner_path = Path(__file__).resolve().parents[1] / "services" / "svg_print_runner.py"
+        generation_runner.launch_detached_command(
+            [
+                sys.executable,
+                str(runner_path),
+                str(source_path),
+                str(invocation.target_path),
+                pdf_download_url,
+                printer_name,
+            ],
+            cwd=invocation.cwd,
+        )
+        flash(f"Converting {relative_path} to PDF then printing to {printer_name}.", "success")
+        return redirect(url_for("parts.part_detail", part_id=part_id))
+
     if invocation.mode == "launch":
         generation_runner.launch_detached_command(invocation.command or [], cwd=invocation.cwd)
         for extra_command in invocation.additional_commands:
@@ -289,7 +409,7 @@ def run_part_file_action(part_id: str, relative_path: str, action_id: str):
     abort(400)
 
 
-@parts_blueprint.get("/parts/<part_id>/files/<path:relative_path>")
+@parts_blueprint.get("/parts/<part_id>/<path:relative_path>")
 def part_file(part_id: str, relative_path: str):
     part = _load_part_or_404(part_id)
     requested = _resolve_part_file_path(part, relative_path)
